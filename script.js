@@ -7,7 +7,8 @@ btn.addEventListener('click', ()=>{
 async function getProducts(url) {
     try {
         const response = await fetch(url)
-        console.log(response)
+        const data = await response.json()
+        console.log(data.items)
     } catch (error) {
         console.log(error)
     }
